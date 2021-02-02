@@ -1,0 +1,27 @@
+BBR
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+
+安装
+curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/install-release.sh | sudo bash
+
+卸载
+curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/uninstall.sh | sudo bash
+
+配置文件下载
+wget -O /etc/v2ray/config.json https://raw.githubusercontent.com/oneproxy1/airport/main/config.json
+
+编辑配置文件
+vi /etc/v2ray/config.json
+
+启动
+service v2ray restart.service
+systemctl start v2ray.service (CentOS7 命令)
+/usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
+
+websocket配置
+{
+    "path": "/目录",
+    "headers": {
+      "Host": "域名"
+    }
+}
